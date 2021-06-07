@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 30%;
+    margin: 50px auto;
+}
+.burger{
+    position: absolute;
+    right: 0;
+    width: 96px;
+    height: 96px;
+    cursor: pointer;
+    border: none;
+    border-radius: 30px;
+}
+
+.burger div {
+    width: 65px;
+    height: 10px;
+    background-color: white;
+}
+.line-one {
+    position: absolute;
+    top: 17px;
+    left: 16px;
+    transition-property: top, transform;
+    transition-duration: 0.5s;
+}
+
+.line-one.active-btn{
+    top: 43px;
+    transform: rotate(135deg);
+}
+
+.line-two{
+    position: absolute;
+    bottom: 43px;
+    left: 16px;
+}
+
+.line-two.active-btn {
+    background: none;
+    transition-duration: 0.3s;
+}
+
+.line-three {
+    position: absolute;
+    bottom: 17px;
+    left: 16px;
+    transition-property: bottom, transform;
+    transition-duration: 0.5s;
+}
+
+.line-three.active-btn{
+    bottom: 43px;
+    transform: rotate(-135deg);
+}
+
+.burger-line {
+    background: #00ce00;
+    transition-property: background;
+    transition-duration: 0.5s;
+}
+
+.burger-line.active-btn{
+    background: rgb(168, 46, 9);
+    z-index: 20;
+}
+
+#nav-menu {
+    position: fixed;
+    width: 96px;
+    background: rgb(255, 255, 255);
+    height: 500px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    transition: all ease 1s
+}
+
+#nav-menu.active-btn {
+    width: 500px;
+}
+
+#image {
+    background-image: url('image.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 100%;
+    transition: all ease 0.6s;
+    width: 10px;
+    margin: 0 auto;
+    
+}
+#image.active-btn {
+    width: 500px;
+    transition: all ease 1s;
+}
+
