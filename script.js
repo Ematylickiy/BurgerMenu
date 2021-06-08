@@ -1,15 +1,13 @@
-const btn1 = document.querySelector('.btn1');
-const btn2 = document.querySelector('.btn2');
-const btn3 = document.querySelector('.btn3');
+let list = document.querySelector('.list');
+let btnIphone = document.querySelector('.Iphone');
+let btnSams = document.querySelector('.Samsung');
+let btnXiaomi = document.querySelector('.Xiaomi');
 
-btn1.addEventListener('click', clicker);
-btn2.addEventListener('click', clicker);
-btn3.addEventListener('click', clicker);
+btnIphone.addEventListener('click', clicker);
+btnSams.addEventListener('click', clicker);
+btnXiaomi.addEventListener('click', clicker);
 
 function clicker() {
-    this.classList.toggle('active');
-    let dataValue = this.getAttribute('data-active');
-    document.querySelector('p[data-active="'+ dataValue + '"]').classList.toggle('activeText');
+    let value = this.getAttribute('data-position');
+    list.style.left = value;
 };
-
-
