@@ -1,12 +1,21 @@
-const btnBurger = document.querySelector('.burger-line');
-const a = Array.from(document.querySelector('.burger-line').children);
-btnBurger.addEventListener('click', burgerMenu);
+const btn1 = document.querySelector('.btn1');
+const btn2 = document.querySelector('.btn2');
+const btn3 = document.querySelector('.btn3');
 
-function burgerMenu() {
-    this.classList.toggle('active-btn');
-    for (let i = 0; i < a.length; i++){
-        a[i].classList.toggle('active-btn');
-    };
-    document.querySelector('#nav-menu').classList.toggle('active-btn');
-    document.querySelector('#image').classList.toggle('active-btn');
+btn1.onclick = () => {
+    btn1.classList.toggle('active')
+    document.querySelector('.text1').classList.toggle('activeText');
 };
+
+btn2.onclick = () => {
+    btn2.classList.toggle('active')
+    document.querySelector('.text2').classList.toggle('activeText');
+};
+
+btn3.onclick = () => {
+    btn3.classList.toggle('active')
+    document.querySelector('.text3').classList.toggle('activeText');
+};
+
+
+
