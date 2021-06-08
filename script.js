@@ -1,21 +1,22 @@
-const btn1 = document.querySelector('.btn1');
-const btn2 = document.querySelector('.btn2');
-const btn3 = document.querySelector('.btn3');
+let list = document.querySelector('.list')
+let btnIphone = document.querySelector('.Iphone')
+let btnSams = document.querySelector('.Samsung')
+let btnXiaomi = document.querySelector('.Xiaomi')
 
-btn1.onclick = () => {
-    btn1.classList.toggle('active')
-    document.querySelector('.text1').classList.toggle('activeText');
-};
+let stocValue = 0;
+btnIphone.onclick = () => {
+    stocValue = 0;
+    list.style.left = stocValue + 'px';
+}
+    
+btnSams.onclick = () => {
+    stocValue = -665
+    list.style.left = stocValue + 'px';
+}
 
-btn2.onclick = () => {
-    btn2.classList.toggle('active')
-    document.querySelector('.text2').classList.toggle('activeText');
-};
-
-btn3.onclick = () => {
-    btn3.classList.toggle('active')
-    document.querySelector('.text3').classList.toggle('activeText');
-};
-
-
-
+btnXiaomi.onclick = () => {
+    if (stocValue == 0|| stocValue==-665) {
+        stocValue = -1330;
+        list.style.left = stocValue + 'px';
+    }
+}
